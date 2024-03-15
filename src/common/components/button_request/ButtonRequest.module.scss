@@ -1,0 +1,56 @@
+.button_request {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  width: 380px;
+  height: 71px;
+
+  .icon_block {
+    position: relative;
+    width: 71px;
+    height: 100%;
+
+    .arrow_icon {
+      position: absolute;
+      bottom: 13px;
+      right: 13px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.light {
+  background-color: #FFFFFF;
+  color: #0B3461;
+
+
+  .icon_block {
+    border-left: 2px solid #0B3461;
+
+    .arrow_icon {
+      stroke: #0B3461;
+    }
+  }
+}
+
+.dark {
+  color: #FFFFFF;
+  background-color: rgba(7, 48, 93, 0);
+  border: 1px solid #FFFFFF;
+
+  .icon_block {
+    border-left: 1px solid #FFFFFF;
+
+    .arrow_icon {
+      stroke: #FFFFFF;
+    }
+  }
+}
