@@ -1,0 +1,29 @@
+@mixin link-styles {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  margin-right: 30px;
+
+  &:hover {
+    border-bottom: 1px solid #FFFFFF;
+  }
+}
+
+.nav_menu {
+  display: flex;
+
+  .link {
+    @include link-styles;
+
+    :last-child {
+      margin-right: 0;
+    }
+  }
+
+  .active_link {
+    @include link-styles;
+    border-bottom: 1px solid #FFFFFF;
+  }
+}
