@@ -1,0 +1,28 @@
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 1px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
