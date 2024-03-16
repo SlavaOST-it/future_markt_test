@@ -7,6 +7,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #FFFFFF;
+  max-width: 170px;
 
   &::before,
   &::after {
@@ -16,6 +17,7 @@
     right: 0;
     background-color: #ffffff;
     height: 1px;
+    max-width: 170px;
   }
 
   &::before {
