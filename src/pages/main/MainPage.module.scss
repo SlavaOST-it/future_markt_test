@@ -1,0 +1,64 @@
+.mainPage {
+  min-height: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+
+  .block_info {
+    max-width: 800px;
+    margin: 118px 84px 43px 0;
+    //margin-right: 84px;
+
+    h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 65px;
+      font-weight: 600;
+      line-height: 88px;
+      text-align: left;
+      margin-bottom: 53px;
+    }
+
+    .subtitle {
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+
+      color: rgba(255, 255, 255, 0.50);
+
+      border-left: 0.5px solid #FFFFFF;
+      padding: 0 24px;
+      margin-bottom: 64px;
+    }
+
+    .block_buttons {
+      display: flex;
+      gap: 40px;
+
+      margin-bottom: 112px;
+    }
+
+    .quantity_block {
+      display: flex;
+      gap: 230px;
+    }
+  }
+
+  .block_img {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .img_mentor {
+      //position: absolute;
+      //bottom: 0;
+      //margin-left: 84px;
+      max-width: 525px;
+      max-height: 808px;
+    }
+  }
+
+}

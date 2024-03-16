@@ -1,0 +1,57 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  min-width: 612px;
+  padding: 40px 32px 0 72px;
+  height: 100vh;
+
+  background-color: #0F1D45;;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+
+
+  .button_group {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 38px;
+
+    .close_btn {
+      background: none;
+
+
+      .cross_icon {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 74px;
+    text-align: left;
+
+    margin-bottom: 66px;
+
+  }
+}
+
+.input_group{
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
+
+  margin-bottom: 110px;
+}
+
+.is_open {
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.is_close {
+  left: -612px;
+  transition: all 0.3s ease-in-out;
+}
