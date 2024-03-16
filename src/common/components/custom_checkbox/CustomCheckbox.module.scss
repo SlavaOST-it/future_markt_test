@@ -1,0 +1,49 @@
+.wrapper {
+  margin-bottom: 88px;
+
+  .checkbox_group {
+    display: flex;
+    align-items: center;
+
+
+    .custom_checkbox {
+      --checkbox-color: #ffffff; /* Цвет фона чекбокса */
+      --check-color: #ffffff; /* цвет флажка */
+
+      margin-right: 23px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--checkbox-color);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {              /* флажок */
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: var(--check-color);
+
+        visibility: hidden;
+      }
+
+      &:checked::before {
+        visibility: visible;
+      }
+    }
+
+    span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.035em;
+      text-align: left;
+    }
+  }
+}
