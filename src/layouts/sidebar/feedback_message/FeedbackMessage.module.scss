@@ -1,0 +1,34 @@
+.feedback_message {
+  max-width: 490px;
+
+  .text_group {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin-bottom: 209px;
+
+    .title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 79px;
+      text-align: left;
+
+      margin-bottom: 98px;
+    }
+
+    .text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 58px;
+      text-align: center;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: right;
+  }
+}
