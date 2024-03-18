@@ -5,9 +5,12 @@ import img_mentor from '../../assets/images/mentor.png'
 import {ButtonRequest} from "../../common/components/button_request/ButtonRequest";
 import {QuantityInfo} from "../../common/components/quantity_info/QuantityInfo";
 import {Sidebar} from "../../layouts/sidebar/Sidebar";
+import {dateSum} from "../../utils/support_functions/calculateDateSum";
+import {useExchangeRateFetcher} from "../../utils/useExchangeRateFetcher";
 
 export const MainPage = () => {
     const [isOpenSidebar, setIsOpenSidebar] = useState(false)
+    const productivity = useExchangeRateFetcher('GBP')
 
     const activeSidebarHandler = () => {
         setIsOpenSidebar(true)
@@ -39,8 +42,8 @@ export const MainPage = () => {
                 </div>
 
                 <div className={s.quantity_block}>
-                    <QuantityInfo value={'130+'} description={'техника для достижения целей'}/>
-                    <QuantityInfo value={'205%'} description={'увеличение личной продуктивности'}/>
+                    <QuantityInfo value={dateSum.toString() + '+'} description={'техника для достижения целей'}/>
+                    <QuantityInfo value={productivity?.toString() + '%'} description={'увеличение личной продуктивности'}/>
                 </div>
             </div>
 
