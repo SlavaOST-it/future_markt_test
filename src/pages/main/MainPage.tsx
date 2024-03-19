@@ -1,15 +1,20 @@
-import React, {useState} from 'react';
+import React, {FC} from 'react';
 
 import s from './MainPage.module.scss'
 import img_mentor from '../../assets/images/mentor.png'
-import {ButtonRequest} from "../../common/components/button_request/ButtonRequest";
-import {QuantityInfo} from "../../common/components/quantity_info/QuantityInfo";
-import {Sidebar} from "../../layouts/sidebar/Sidebar";
-import {dateSum} from "../../utils/support_functions/calculateDateSum";
-import {useExchangeRateFetcher} from "../../utils/useExchangeRateFetcher";
 
-export const MainPage = () => {
-    const [isOpenSidebar, setIsOpenSidebar] = useState(false)
+import {QuantityInfo} from "../../common/components/quantity_info/QuantityInfo";
+import {ButtonRequest} from "../../common/components/button_request/ButtonRequest";
+
+import {dateSum} from "../../utils/support_functions/calculateDateSum";
+import {useExchangeRateFetcher} from "../../utils/hooks/useExchangeRateFetcher";
+
+
+type MainPageType = {
+    setIsOpenSidebar: (isOpen: boolean)=>void
+}
+
+export const MainPage: FC<MainPageType> = ({setIsOpenSidebar}) => {
     const productivity = useExchangeRateFetcher('GBP')
 
     const activeSidebarHandler = () => {
@@ -50,11 +55,6 @@ export const MainPage = () => {
             <div className={s.block_img}>
                 <img className={s.img_mentor} src={img_mentor} alt={'mentor'}/>
             </div>
-
-            <Sidebar
-                isOpenSidebar={isOpenSidebar}
-                setIsOpenSidebar={setIsOpenSidebar}
-            />
         </main>
     );
 };

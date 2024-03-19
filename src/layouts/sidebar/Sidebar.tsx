@@ -4,9 +4,10 @@ import s from './Sidebar.module.scss'
 import sprite from "../../assets/icons/sprite.svg";
 
 import {FeedbackForm} from "./feedback_form/FeedbackForm";
-import {FormValuesType, useValidation} from "../../utils/hooks/useValidation";
 import {FeedbackMessage} from "./feedback_message/FeedbackMessage";
-import { FormikHelpers } from 'formik';
+
+import {FormikHelpers} from 'formik';
+import {FormValuesType, useValidation} from "../../utils/hooks/useValidation";
 
 
 type SidebarType = {
@@ -26,23 +27,29 @@ export const Sidebar: FC<SidebarType> = ({isOpenSidebar, setIsOpenSidebar}) => {
     }
 
     return (
-        <div className={isOpenSidebar
-            ? s.sidebar + ' ' + s.is_open
-            : s.sidebar + ' ' + s.is_close}
-        >
+        <>
+            {isOpenSidebar && (
+                <div className={s.overlay} onClick={() => closeSidebar(formik)}></div>
+            )}
 
-            <div className={s.button_group}>
-                <button className={s.close_btn} onClick={() => closeSidebar(formik)}>
-                    <svg className={s.cross_icon}>
-                        <use xlinkHref={`${sprite}#cross`}/>
-                    </svg>
-                </button>
-            </div>
+            <aside className={isOpenSidebar
+                ? s.sidebar + ' ' + s.is_open
+                : s.sidebar + ' ' + s.is_close}
+            >
 
-            {showMessage
-                ? <FeedbackMessage/>
-                : <FeedbackForm formik={formik} setShowMessage={setShowMessage}/>
-            }
-        </div>
+                <div className={s.button_group}>
+                    <button className={s.close_btn} onClick={() => closeSidebar(formik)}>
+                        <svg className={s.cross_icon}>
+                            <use xlinkHref={`${sprite}#cross`}/>
+                        </svg>
+                    </button>
+                </div>
+
+                {showMessage
+                    ? <FeedbackMessage/>
+                    : <FeedbackForm formik={formik} setShowMessage={setShowMessage}/>
+                }
+            </aside>
+        </>
     );
 };

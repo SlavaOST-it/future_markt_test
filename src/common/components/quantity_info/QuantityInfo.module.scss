@@ -1,18 +1,19 @@
+@import 'src/common/styles/variables';
+
 .quantity_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 
   max-width: 190px;
   min-height: 138px;
 
   padding: 0 0 0 24px ;
 
-  border-left: 1px solid #FFFFFF;
+  border-left: 1px solid $text-color;
 
   .value{
-    font-family: 'Montserrat', sans-serif;
+    font-family: $secondary-fontFamily;
     font-size: 40px;
     font-weight: 600;
     line-height: 57px;
@@ -20,11 +21,11 @@
 
   }
   .description {
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-fontFamily;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba($text-color, 0.5);
   }
 }

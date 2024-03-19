@@ -1,13 +1,15 @@
+@import "src/common/styles/variables";
+
 @mixin link-styles {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: $text-color;
   margin-right: 30px;
 
   &:hover {
-    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px solid $text-color;
   }
 }
 
@@ -24,6 +26,6 @@
 
   .active_link {
     @include link-styles;
-    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px solid $text-color;
   }
 }

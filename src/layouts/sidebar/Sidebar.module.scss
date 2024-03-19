@@ -1,23 +1,45 @@
-.sidebar {
+@import "src/common/styles/variables";
+
+/* Миксин для задания общих стилей для позиции fixed */
+@mixin fixed-position($top, $left) {
   position: fixed;
-  top: 0;
+  top: $top;
+  left: $left;
+}
+
+/* Миксин для переходов */
+@mixin transition($properties) {
+  transition: $properties 0.3s ease-in-out;
+}
+
+/* Общие стили для оверлея */
+.overlay {
+  @include fixed-position(0, 0);
+  width: 100%;
+  height: 100%;
+  background-color: rgba($deep-blue-color, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+/* Стили боковой панели */
+.sidebar {
+  @include fixed-position(0, 0);
   min-width: 612px;
   padding: 40px 32px 0 72px;
   height: 100vh;
-
-  background-color: #0F1D45;;
+  background-color: $deep-blue-color;
   z-index: 999;
-  transition: all 0.3s ease-in-out;
+  @include transition(all);
 
-
+  /* Стили для группы кнопок */
   .button_group {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     margin-bottom: 38px;
 
     .close_btn {
       background: none;
-
 
       .cross_icon {
         height: 30px;
@@ -27,31 +49,29 @@
   }
 
   h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $primary-fontFamily;
     font-size: 50px;
     font-weight: 600;
     line-height: 74px;
     text-align: left;
-
     margin-bottom: 66px;
-
   }
 }
 
-.input_group{
+.input_group {
   display: flex;
   flex-direction: column;
   gap: 65px;
-
   margin-bottom: 110px;
 }
 
+/* Анимация для показа/скрытия боковой панели */
 .is_open {
   left: 0;
-  transition: all 0.3s ease-in-out;
+  @include transition(all);
 }
 
 .is_close {
   left: -612px;
-  transition: all 0.3s ease-in-out;
+  @include transition(all);
 }

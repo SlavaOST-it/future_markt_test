@@ -1,5 +1,8 @@
+@import "src/common/styles/variables";
+
+
 .button_request {
-  font-family: 'Raleway', sans-serif;
+  font-family: $primary-fontFamily;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
@@ -28,29 +31,28 @@
 }
 
 .light {
-  background-color: #FFFFFF;
-  color: #0B3461;
-
+  background-color: $text-color;
+  color: $blue-color;
 
   .icon_block {
-    border-left: 2px solid #0B3461;
+    border-left: 2px solid $blue-color;
 
     .arrow_icon {
-      stroke: #0B3461;
+      stroke: $blue-color;
     }
   }
 }
 
 .dark {
-  color: #FFFFFF;
+  color: $text-color;
   background-color: rgba(7, 48, 93, 0);
-  border: 1px solid #FFFFFF;
+  border: 1px solid $text-color;
 
   .icon_block {
-    border-left: 1px solid #FFFFFF;
+    border-left: 1px solid $text-color;
 
     .arrow_icon {
-      stroke: #FFFFFF;
+      stroke: $text-color;
     }
   }
 }

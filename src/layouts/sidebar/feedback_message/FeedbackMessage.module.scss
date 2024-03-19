@@ -1,34 +1,35 @@
+@import "src/common/styles/variables";
+
+/* Миксин для общих текстовых стилей */
+@mixin text-styles($size, $weight, $line-height, $text-align) {
+  font-family: $primary-fontFamily;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-align: $text-align;
+}
+
 .feedback_message {
   max-width: 490px;
 
   .text_group {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     margin-bottom: 209px;
 
     .title {
-      font-family: 'Raleway', sans-serif;
-      font-size: 50px;
-      font-weight: 600;
-      line-height: 79px;
-      text-align: left;
-
+      @include text-styles(50px, 600, 79px, left);
       margin-bottom: 98px;
     }
 
     .text {
-      font-family: 'Raleway', sans-serif;
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 58px;
-      text-align: center;
+      @include text-styles(40px, 600, 58px, center);
     }
   }
 
   .logo {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
   }
 }

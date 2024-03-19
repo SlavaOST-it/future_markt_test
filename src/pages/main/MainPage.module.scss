@@ -1,3 +1,5 @@
+@import "src/common/styles/variables";
+
 .mainPage {
   min-height: 100%;
   display: flex;
@@ -8,10 +10,9 @@
   .block_info {
     max-width: 800px;
     margin: 118px 84px 43px 0;
-    //margin-right: 84px;
 
     h1 {
-      font-family: 'Raleway', sans-serif;
+      font-family: $primary-fontFamily;
       font-size: 65px;
       font-weight: 600;
       line-height: 88px;
@@ -20,15 +21,15 @@
     }
 
     .subtitle {
-      font-family: 'Raleway', sans-serif;
+      font-family: $primary-fontFamily;
       font-size: 16px;
       font-weight: 400;
       line-height: 24px;
       text-align: left;
 
-      color: rgba(255, 255, 255, 0.50);
+      color: rgba($text-color, 0.50);
 
-      border-left: 0.5px solid #FFFFFF;
+      border-left: 0.5px solid $text-color;
       padding: 0 24px;
       margin-bottom: 64px;
     }
@@ -53,12 +54,18 @@
     justify-content: flex-end;
 
     .img_mentor {
-      //position: absolute;
-      //bottom: 0;
-      //margin-left: 84px;
       max-width: 525px;
       max-height: 808px;
     }
   }
 
+  @media screen and (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 15px;
+      line-height: 34px;
+    }
+  }
 }

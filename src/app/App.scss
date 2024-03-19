@@ -1,6 +1,8 @@
+@import "src/common/styles/_variables.scss";
+
 .app {
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFFF;
+  font-family: $primary-fontFamily;
+  color: $text-color;
   line-height: 35px;
 
   min-height: 100vh;
@@ -8,10 +10,8 @@
 
   background: url("../assets/images/bg.jpg") center/cover no-repeat;
 
-
   h1 {
     font-size: 65px;
-
   }
 
   h2 {
@@ -22,7 +22,7 @@
     overflow: hidden;
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(19, 52, 87, 0.87);
+    background-color: $base-blue-color;
     display: flex;
     flex-direction: column;
     justify-content: center;

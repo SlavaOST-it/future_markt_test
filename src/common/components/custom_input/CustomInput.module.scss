@@ -1,14 +1,18 @@
+@import "src/common/styles/variables";
+
 .group {
   position: relative;
 
   input {
-    font-size: 18px;
-    color: #FFFFFF;
-    padding: 10px 10px 10px 5px;
+    font-variant-numeric: lining-nums;
+    font-family: $primary-fontFamily;
+    font-size: 22px;
+    color: $text-color;
+
     display: block;
     width: 480px;
     height: 36px;
-    border: none;
+    padding: 10px 10px 10px 5px;
     border-bottom: 1px solid #757575;
     outline: none;
     background: none;
@@ -21,19 +25,19 @@
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus {
-    -webkit-text-fill-color: #ffffff;
-    -webkit-box-shadow: 0 0 0 40rem #0F1D45 inset;
-    color: #ffffff;
+    -webkit-text-fill-color: $text-color;
+    -webkit-box-shadow: 0 0 0 40rem $deep-blue-color inset;
+    color: $text-color;
   }
 
   /* active state */
   input:focus ~ label, input:valid ~ label {
     top: -20px;
     font-size: 14px;
-    color: #ffffff;
+    color: $text-color;
   }
 
-  /* BOTTOM BARS ================================= */
+  /* Полоска под инпутом */
   .bar {
     position: relative;
     display: block;
@@ -46,7 +50,7 @@
     width: 0;
     bottom: 1px;
     position: absolute;
-    background: #ffffff;
+    background: $text-color;
     transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -webkit-transition: 0.2s ease all;
@@ -60,12 +64,12 @@
     right: 50%;
   }
 
-  /* active state */
+
   input:focus ~ .bar:before, input:focus ~ .bar:after {
     width: 50%;
   }
 
-  /* HIGHLIGHTER ================================== */
+  /* Подсветка под инпутом */
   .highlight {
     position: absolute;
     height: 60%;
@@ -76,7 +80,6 @@
     opacity: 0.5;
   }
 
-  /* active state */
   input:focus ~ .highlight {
     -webkit-animation: inputHighlighter 0.3s ease;
     -moz-animation: inputHighlighter 0.3s ease;
@@ -84,10 +87,10 @@
   }
 }
 
-/* ANIMATIONS ================ */
+/* Анимация подсветки */
 @-webkit-keyframes inputHighlighter {
   from {
-    background: #ffffff;
+    background: $text-color;
   }
   to {
     width: 0;
@@ -97,7 +100,7 @@
 
 @-moz-keyframes inputHighlighter {
   from {
-    background: #ffffff;
+    background: $text-color;
   }
   to {
     width: 0;
@@ -107,7 +110,7 @@
 
 @keyframes inputHighlighter {
   from {
-    background: #ffffff;
+    background: $text-color;
   }
   to {
     width: 0;

@@ -1,6 +1,21 @@
+@import "variables";
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
-
   padding: 40px 0 0 0;
+
+
+  @media screen and ($tablet-screen) {
+    max-width: 576px;
+    width: 100%;
+    padding: 10px;
+    margin: 50px auto;
+  }
+
+  @media screen and ($mobile-screen) {
+    max-width: 300px;
+    padding: 10px 5px;
+    margin: 50px auto;
+  }
 }
